@@ -1,9 +1,7 @@
-import React, { Component } from 'react'
-import NewsItem from './NewsItem'
-
-export class News extends Component {
-
-  articles= [
+{
+    "status": "ok",
+    "totalResults": 36,
+    "articles": [
     {
     "source": {
     "id": null,
@@ -45,7 +43,7 @@ export class News extends Component {
     },
     {
     "source": {
-    "id": "NKR",
+    "id": null,
     "name": "Milwaukee Journal Sentinel"
     },
     "author": "Christopher Kuhagen, Emmett Prosser",
@@ -265,51 +263,4 @@ export class News extends Component {
     "content": "The Georgia Bureau of Investigation identified those killed in the Apalachee High School shooting as Richard Aspinwall, 39; Cristina Irimie, 53; and Mason Schermerhorn and Christian Angulo, both 14.\r… [+1955 chars]"
     }
     ]
-
-  constructor(){
-    super();
-    this.state={
-      articles:this.articles,
-      loading:false
-     
     }
-  }
-  render() {
-    return (
-      <div className='container my-3'>
-        <h3>NewsApp - Top Headlines</h3>
-        <div className='row'>
-          {this.state.articles.map((element)=> {
-            return  <div className='col-md-4' key={element.url}>
-            <NewsItem title={element.title.slice(0,45)} description={element.description.slice(0,88)} ImageUrl={element.urlToImage}
-            newsUrl={element.url}/>
-            </div>
-
-          }
-
-
-
-
-          )
-        }
-         
-
-          {/* <div className='col-md-4'>
-          <NewsItem title="mytitle" description="mydesc"/>
-          </div>
-
-          <div className='col-md-4'>
-          <NewsItem title="mytitle" description="mydesc"/>
-          </div> */}
-
-        
-
-        </div>
-               
-              
-      </div>
-    )
-  }
-}
-
-export default News
