@@ -32,7 +32,7 @@ export class News extends Component {
             page:1, 
             totalResults: 0
     }
-    document.title = `${this.capitalizeFirstLetter(this.props.category)} - NewsPortal`;
+    // document.title = `${this.capitalizeFirstLetter(this.props.category)} - NewsPortal`;
   }
 
   fetchMoreData = async () => {  
@@ -60,6 +60,7 @@ export class News extends Component {
       loading: false})
 
       this.props.setProgress(100);
+      document.title = "NewsPortal";
 }
 
 
